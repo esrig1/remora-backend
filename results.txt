@@ -1,0 +1,26 @@
+
+Final Transcription with Speaker Labels:
+{'speaker': 'SPEAKER_01', 'text': " Hi, I'm Rhea."}
+{'speaker': 'SPEAKER_01', 'text': 'Thank you for coming to interview with us today.'}
+{'speaker': 'SPEAKER_01', 'text': "Let's just go ahead and get started with a quick introduction."}
+{'speaker': 'SPEAKER_01', 'text': 'Could you tell me a little bit about yourself?'}
+{'speaker': 'SPEAKER_00', 'text': ' Yeah, absolutely.'}
+{'speaker': 'SPEAKER_00', 'text': 'First of all, thank you so much for having me.'}
+{'speaker': 'SPEAKER_00', 'text': "It's an honor to be here."}
+{'speaker': 'SPEAKER_00', 'text': 'So a bit about myself.'}
+{'speaker': 'SPEAKER_00', 'text': "I'm originally from Morocco where I lived pretty much my whole life."}
+{'speaker': 'SPEAKER_00', 'text': 'I then came to Boston and studied industrial engineering at Northeastern University.'}
+{'speaker': 'SPEAKER_00', 'text': 'While I was in college, I did a few different internships.'}
+{'speaker': 'SPEAKER_00', 'text': 'I did technical ones at a local power plant and at Amazon Robotics.'}
+{'speaker': 'SPEAKER_00', 'text': 'And I also did one in consulting at the Boston Consulting Group and was also the president of the consulting club at my university.'}
+{'speaker': 'SPEAKER_00', 'text': " So really I'm someone who enjoys both the business side of things, but I also do have a passion for technology."}
+{'speaker': 'SPEAKER_00', 'text': 'So down the line, my goal is to start my own education technology company in my home country, Morocco, so I can make education more affordable through the use of tech.'}
+{'speaker': 'SPEAKER_00', 'text': 'And outside of like school and work, I also do magic tricks on college campuses.'}
+{'speaker': 'SPEAKER_01', 'text': 'Oh wow, that sounds like a very impressive background.'}
+{'speaker': 'SPEAKER_01', 'text': 'So why exactly are you interested in interviewing with our consulting firm?'}
+{'speaker': 'SPEAKER_00', 'text': ' Yeah, my reasons for joining your consulting firm are twofold.'}
+{'speaker': 'SPEAKER_00', 'text': 'Number one, I think the exposure to the strategy work is very appealing to me.'}
+{'speaker': 'SPEAKER_00', 'text': "And then second, the opportunities for externship is also one that I'm highly looking at."}
+{'speaker': 'SPEAKER_00', 'text': "So on the strategy side, I know that your consulting firm is one of the few that gives you exposure to C-suite executives and to strategy type projects early on in your career, which is something that I won't find at other companies."}
+{'speaker': 'SPEAKER_00', 'text': 'Then the second reason is the opportunity to do externships.'}
+{'speaker': 'SPEAKER_00', 'text': 'So as I mentioned, I am interested in the education sector down the line.'}
