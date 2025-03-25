@@ -1,7 +1,7 @@
 import whisperx
 import gc
 
-def transcribe(audio_file):
+def whisperX(audio_file):
     device = "cpu" 
     batch_size = 16  # Reduce if low on GPU memory
     compute_type = "int8"  # Change to "int8" if low on GPU memory (may reduce accuracy)
@@ -23,14 +23,15 @@ def transcribe(audio_file):
     diarize_segments = diarize_model(audio)
     result = whisperx.assign_word_speakers(diarize_segments, result)
     
-    returner = []
+    builder = []
     with open("results.txt", "a") as file:
         file.write("\nFinal Transcription with Speaker Labels:\n")
         for segment in result["segments"]:
             line = {}
+            line["start"] = segment["start"]
+            line["end"] = segment["end"]
             line["speaker"] = segment["speaker"]
             line["text"] = segment["text"]
-            file.write(f"{line}\n")
-            returner.append(line)
+            builder.append(line)
     
-    return returner
+    return builder
