@@ -3,7 +3,7 @@ from app.services.transcribe import transcribe
 
 router = APIRouter()
 
-@router.post("/transcribe/")
+@router.post("/transcribe")
 async def transcribe_route(file: UploadFile = File(...)):
 
     result = await transcribe(file)
