@@ -18,20 +18,6 @@ async def transcribe(file):
     os.remove(file_path)
     return consolidate(result)
 
-async def transcribe_dirty(file): 
-
-    file_path = os.path.join(TEMP_DIR, file.filename)
-    
-    with open(file_path, "wb") as buffer:
-        buffer.write(await file.read())
-
-    result = whisperX(file_path)
-
-
-
-    os.remove(file_path)
-    return result
-
 
 def consolidate(result):
     returner = []

@@ -11,13 +11,6 @@ async def transcribe_route(file: UploadFile = File(...)):
 
     return {"transcription": result}
 
-@router.post("/transcribe_dirty")
-async def transcribe_route(file: UploadFile = File(...)):
-
-    result = await transcribe_dirty(file)
-
-
-    return {"transcription": result}
 
 
 
