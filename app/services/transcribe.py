@@ -1,5 +1,6 @@
 import os
 from app.models import whisperX
+# from speaker_embedding import SpeakerService
 
 TEMP_DIR = "temp"
 os.makedirs(TEMP_DIR, exist_ok=True)  # Ensure the temp directory exists
@@ -15,8 +16,14 @@ async def transcribe(file):
 
 
 
+
+
+    consolidated_result = consolidate(result)
+
+    # speaker_embeddings = SpeakerService(file_path, consolidated_result)
+
     os.remove(file_path)
-    return consolidate(result)
+    return consolidated_result
 
 
 def consolidate(result):

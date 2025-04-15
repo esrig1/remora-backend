@@ -1,5 +1,5 @@
 from fastapi import APIRouter, File, UploadFile
-from app.services.transcribe import transcribe, transcribe_dirty
+from app.services.transcribe import transcribe
 
 router = APIRouter()
 
