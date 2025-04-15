@@ -10,7 +10,7 @@ def whisperX(audio_file):
         HUGGINGFACE_TOKEN = f.read().strip()  # Remove any trailing newline
 
     # 1. Transcribe with original whisper (batched)
-    model = whisperx.load_model("medium", device, compute_type=compute_type)
+    model = whisperx.load_model("small", device, compute_type=compute_type)
     audio = whisperx.load_audio(audio_file)
     result = model.transcribe(audio, batch_size=batch_size)
     
