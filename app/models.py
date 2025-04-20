@@ -1,5 +1,11 @@
 import whisperx
-import gc
+import torchaudio
+import torch
+import io
+from pyannote.audio import Inference, Model
+from pyannote.core import Segment
+from pydub import AudioSegment
+
 
 def whisperX(audio_file):
     device = "cpu" 
@@ -35,3 +41,27 @@ def whisperX(audio_file):
             builder.append(line)
     
     return builder
+
+
+def pyannote_embedding(file_path, start, end):
+    with open("key.txt", "r") as f:
+        HUGGINGFACE_TOKEN = f.read().strip()
+
+    model = Model.from_pretrained("pyannote/embedding", use_auth_token=HUGGINGFACE_TOKEN)
+    inference = Inference(model, window="whole", device=torch.device("cpu"))
+    excerpt = Segment(start, end)
+
+    embedding = inference(file_path, excerpt)
+
+    return embedding.tolist()
+    
+def pyannote_embedding2(file_path):
+    with open("key.txt", "r") as f:
+        HUGGINGFACE_TOKEN = f.read().strip()
+
+    model = Model.from_pretrained("pyannote/embedding", use_auth_token=HUGGINGFACE_TOKEN)
+    inference = Inference(model, window="whole", device=torch.device("cpu"))
+
+    embedding = inference(file_path)
+
+    return embedding.tolist()
