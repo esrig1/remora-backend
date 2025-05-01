@@ -1,0 +1,33 @@
+venv/
+
+# Git files
+.git
+.gitignore
+
+# Docker files
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Python cache and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+.venv
+venv
+env
+
+# IDE config
+.vscode
+.idea
+
+# OS specific
+.DS_Store
+
+# Other misc files
+README.md
+*.log
+tests/
+
+# Optional: If mounting ssl dir via docker-compose, ignore it here too
+# ssl/

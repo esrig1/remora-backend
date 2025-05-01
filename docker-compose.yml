@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  remora-backend:  # Use the actual name of your service if different
+    build: .
+    container_name: remora-backend # Or your preferred container name
+    ports:
+      # Map host port 8000 (HTTP) to container port 8000 (Uvicorn without SSL)
+      - "8000:8000"
+
