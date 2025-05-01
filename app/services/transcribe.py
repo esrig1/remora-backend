@@ -15,6 +15,7 @@ async def transcribe(file_path):
     result = whisperX(file_path)
 
     consolidated_result = consolidate(result)
+    print(consolidated_result)
     return consolidated_result
 
 

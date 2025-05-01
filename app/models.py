@@ -49,9 +49,15 @@ def pyannote_embedding(file_path, start, end):
 
     model = Model.from_pretrained("pyannote/embedding", use_auth_token=HUGGINGFACE_TOKEN)
     inference = Inference(model, window="whole", device=torch.device("cpu"))
-    excerpt = Segment(start, end)
 
-    embedding = inference(file_path, excerpt)
+    waveform, sample_rate = torchaudio.load(file_path)
+
+    start_sample = int(start * sample_rate)
+    end_sample = int(end * sample_rate)
+
+    segment_waveform = waveform[:, start_sample:end_sample]
+
+    embedding = inference({'waveform': segment_waveform, 'sample_rate': sample_rate})
 
     return embedding.tolist()
     
